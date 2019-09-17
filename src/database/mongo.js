@@ -1,12 +1,12 @@
-const MongoMemoryServer = require('mongodb-memory-server');
-const MongoClient = require('mongodb');
+const {MongoMemoryServer} = require('mongodb-memory-server');
+const {MongoClient} = require('mongodb');
 
 let database = null;
 
 async function startDatabase() {
     const mongo = new MongoMemoryServer();
     const mongoDBUrl = await mongo.getConnectionString();
-    const connection = await MongoClient.connect(mongoDBUrl, { useNewUrlParser: true});
+    const connection = await MongoClient.connect(mongoDBUrl, { useNewUrlParser: true, useUnifiedTopology: true});
     database = connection.db();
 }
 
