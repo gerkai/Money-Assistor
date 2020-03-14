@@ -8,7 +8,45 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-sm">
+                <h1>Reactor</h1>
+            </div>
+            <div class="col-sm">
+                <h2 id="myBalance">1000</h2>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col">
+                <form>
+                    <div class="form-row">
+                        <div class="col-auto">
+                            <input type="number" name="amount" class="form-control" placeholder="Enter Amount" required>
+                        </div>
+                        <div class="col-auto">
+                            <select name="addOption" class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option value="1">Expense</option>
+                                <option value="2">Add</option>
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="mr-2 btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Description</p>
+                <ul class="list-group">
+                    <li class="list-group-item">1000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <script src="/js/jquery.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/money.js"></script>
